@@ -118,13 +118,10 @@ $(function(){
             <td class="event-evaluation">${(event.evaluation == "true") ? '<i class="fas fa-plus-circle text-success"></i>' : '<i class="fas fa-minus-circle text-danger"></i>'}</td>
         </tr>`);
     });
-
-    $(".event-detail").hide();
-    $(".event-name i, .event-name b").on("click", function(){
-        $("#udalosti tr").removeClass("bg-secondary text-white");
-        $(this).parents("tr").addClass("bg-secondary text-white");  
+    $(".event-name i, .event-name b").on("click", function(){  
         $(this).parent().next().toggle(700);
     });    
+
 
     heroes.forEach((hero)=>{
         $("#postavy .list-group").append(`<li class="list-group-item list-group-item-action list-group-item-success">${hero.name}</li>`);
@@ -142,8 +139,8 @@ $(function(){
         }
     }
 
-    $("#postavy li:first").addClass('active');
-    fillPersonCard(heroes[0].name);
+    //$("#postavy li:first").addClass('active');
+    //fillPersonCard(heroes[0].name);
     $("#postavy li").on("click", function(){
         $("#postavy li").removeClass("active");
         $(this).addClass("active");        
