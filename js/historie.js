@@ -105,6 +105,7 @@ const heroes = [
  ];
 
 $(function(){
+    $("h2").parents(".row").next().hide();
     $("h2").on("click", function(){
         $(this).parents(".row").next().toggle(1000);
     });
@@ -132,15 +133,15 @@ $(function(){
         $(".card-header").html(`<i class="fas fa-star-of-life"></i> <b>${hero.birth}</b> - <i class="fas fa-cross"></i> <b>${hero.death}</b>`);
         $(".card-title").text(hero.name);
         $(".card-text").text(hero.biography);
-        $(".card-footer").html(`Odkaz: <a href="${hero.online}">${hero.online}</a>`);
+        $(".card-footer").html(`Odkaz: <a href="${hero.online}">${hero.name}</a>`);
         $(".gallery").empty();
         for (let i = 0; i < hero.portraits.length; i++) {
             $(".gallery").append(`<div class="col-sm-4"><a href="#"><img src="images/${hero.portraits[i]}" alt="" class="img-fluid"></a></div>`);        
         }
     }
 
-    //$("#postavy li:first").addClass('active');
-    //fillPersonCard(heroes[0].name);
+    $("#postavy li:first").addClass('active');
+    fillPersonCard(heroes[0].name);
     $("#postavy li").on("click", function(){
         $("#postavy li").removeClass("active");
         $(this).addClass("active");        
