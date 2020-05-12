@@ -27,3 +27,26 @@ h1 small {
 nav.navbar-dark {
     background-color:  rgba(0,0,0,0.3) !important;
 }
+
+#udalosti b {
+    color: rgb(150, 10, 33);
+    font-size: 1.2em;
+}
+
+#udalosti .event-year {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#udalosti .event-evaluation {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#zpravodaj h3 {
+    font-weight: bold;
+    font-size: 1.5em;
+    /*text-align: center;*/
+    padding-bottom: 20px;
+}
