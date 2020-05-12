@@ -146,7 +146,7 @@ $(function(){
         $("#postavy li").removeClass("active");
         $(this).addClass("active");        
         let person = $(this).text();
-        $("#portret").slideUp(1000, function(){
+        $("#portret").slideUp(1500, function(){
             fillPersonCard(person);
         });
         $("#portret").slideDown(1500);

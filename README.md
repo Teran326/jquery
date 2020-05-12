@@ -1,4 +1,4 @@
 úkol do PVY
 
 
-není hotové
+Dá se považovat za hotové, může být oznámkováno
