@@ -522,6 +522,13 @@ let vojvodstvi = [{
 ];
 /* jQuery skript */
 $(function(){
+    $("#rng").click(function(){
+        let paragraph = $("#pl-map path");
+        let random = Math.floor(Math.random() * paragraph.length);
+        puvodni = $("#pl-map path").css('fill');
+            $("#pl-map path").css('fill', puvodni);
+        paragraph.eq(random).click();
+    });
 
     let puvodni = '';  
 
