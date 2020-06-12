@@ -523,36 +523,22 @@ let vojvodstvi = [{
 /* jQuery skript */
 $(function(){
 
-    /* Pomocná proměnná pro uložení původního nastavení stylu výplně (fill) SVG objektu path */   
     let puvodni = '';  
 
-    /* Při přejetí kurzoru myši nad některým SVG objektem typu path (nepravidelný uzavřený mnohoúhelník) se provede: */
+
     $("#pl-map path").on('mouseover', function(){
-            /* Do pomocné proměnné puvodni se uloží barva výplně objektu path */
             puvodni = $(this).css('fill');
-            /* Právně aktivní objekt se vyplní červenou barvou */
-            $(this).css('fill','rgb(247, 159, 121)');
-            /* Nastaví se pro danou oblast popover (grafické vyskakovací okénko) - součást externí knihovny bootstrap4-toggle */          
+            $(this).css('fill','rgb(247, 159, 121)');         
     });
     
-    /* Když myš opustí objekt path: */
     $("#pl-map path").on('mouseout', function(){
-        /* dojde ke změně výplně na původní hodnotu */
         $(this).css('fill', puvodni);
     });
 
-
-    /* Při kliknutí na některý z SVG objektů typu rect (obdélníky - tj. krajská města): */
     $("#pl-map path").on('click', function(){
-        
         let id = $(this).attr('id');
-        /* všechny objekty rect a circle se nejprve vyplní výchozími barvami */
-        //$("#mapa-cr rect").css('fill','black');
-        /* pouze právě aktivní objekt bude nastaven na žlutou barvu */
         $(this).css('fill','rgb(88, 38, 48)');
-        /* s využitím metody find se do proměnné mesto vyhledá v JSON poli mesta objekt podle odpovídajícího id */
         let vojvodstvo = vojvodstvi.find(item => {return item.id == id});
-        /* během efektu zprůhlednění (1 s.) se pomocí callback funkce vyplní blok #info příslušnými daty o vybraném městě  */
         $('#info').fadeOut(1000, function() {$('#info').html(`<div class="col-12"><h2 style="background-color: #62c370">${vojvodstvo.nazev}</h2></div><div class="col-2"><img src="img/${vojvodstvo.znak}" class="img-fluid"></div><div class="col-10">${vojvodstvo.text}</div><div class="col-12 text-center">${vojvodstvo.uzemi}</div><div class="col-6 text-center"><p style="color: #f09">Vojvodské město</p></div><div class="col-6 text-center"><p style="color: #090446">Významná města</p></div>`)});
         $('#info').fadeIn(1000);
     });
