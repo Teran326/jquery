@@ -1,7 +1,7 @@
 const events = [
     {
        "year":"9. století",
-       "event":"Vznik polska jako státu",
+       "event":"Vznik Polska jako státu",
        "detail":"S počátky státní organizace se na polském území setkáváme již ve druhé polovině 9. století. Zárodky státu vznikly současně ve dvou centrech. Byla to knížectví Vislanů na jihu země a knížectví Polanů na severozápadě. Nezávisle na sobě se vyvíjely až do konce 10. století, kdy bylo území Vislanů – Krakovsko připojeno ke knížectví Polanů.",
        "evaluation":"true"
     },
@@ -13,13 +13,13 @@ const events = [
     },
     {
        "year":"1795",
-       "event":"Rozdělení polska",
+       "event":"Rozdělení Polska",
        "detail":"Posilování šlechty a vnitřní rozbroje během 17. století oslabily zemi, takže v letech 1772, 1793 a 1795 si Rusko, Prusko a Rakousko v trojím dělení rozdělily Polsko na základě vzájemné dohody. Po třetím dělení Polska v roce 1795 tak Rzeczpospolita zanikla.",
        "evaluation":"false"
     },
     {
         "year":"1807",
-        "event":"Znovuzřízení polska",
+        "event":"Znovuzřízení Polska",
         "detail":"V letech 1807–1815 zřídil francouzský císař Napoleon I. na části území předtím zabraným Pruskem a Rakouskem Varšavské knížectví, které se stalo spojencem Napoleona a jehož knížetem byl Fridrich August I. Saský, vnuk předposledního polského krále. Po jeho porážce bylo zrušeno a na jeho místě bylo zřízeno autonomní Polské království také nazývané „Kongresovka“. Tento stát podléhal Rusku, jehož panovníkem byl také ruský imperátor. Polsko tak bylo spojené personální unií s Ruskem.",
         "evaluation":"true"
     },
