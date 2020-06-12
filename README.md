@@ -9,3 +9,5 @@
 	Vytvoření stránky o historii
 1.3.1.
 	Oprava pravopisných chyb
+1.4.0.
+	Vytvoření stránky geografie
